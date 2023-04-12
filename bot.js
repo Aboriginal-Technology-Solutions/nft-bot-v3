@@ -71,7 +71,7 @@ appLogger.info("Welcome to the gTrade NFT bot!");
 
 // Parse non-fixed string configuration constants from environment variables up front
 const MAX_FEE_PER_GAS_WEI_HEX = (process.env.MAX_GAS_PRICE_GWEI ?? '').length > 0 ? Web3.utils.toHex(parseInt(process.env.MAX_GAS_PRICE_GWEI, 10) * 1e9) : 0,
-		PAIR_BATCH_SIZE = (process.env.PAIR_BATCH_SIZE) ? PAIR_BATCH_SIZE : 10
+		PAIR_BATCH_SIZE = (process.env.PAIR_BATCH_SIZE) ? PAIR_BATCH_SIZE : 10,
 	  MAX_GAS_PER_TRANSACTION_HEX = Web3.utils.toHex(parseInt(process.env.MAX_GAS_PER_TRANSACTION, 10)),
 	  EVENT_CONFIRMATIONS_MS = parseFloat(process.env.EVENT_CONFIRMATIONS_SEC) * 1000,
 	  AUTO_HARVEST_MS = parseFloat(process.env.AUTO_HARVEST_SEC) * 1000,
